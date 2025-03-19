@@ -21,6 +21,7 @@ Ensure you have the following installed before proceeding:
 - 🔥 Uvicorn
 - 🤗 Transformers
 - 🌍 Requests
+- 🖥️ GPU: NVIDIA A100 with a minimum of 80GB storage
 
 ---
 
