@@ -11,7 +11,7 @@ This repository provides instructions on how to deploy the **Gemma-3-27B-it** mo
 - 📡 Provide a client script to interact with the deployed model.
 
 ## 📂 Files
-- 📝 **main.py** - FastAPI-based deployment script for the model on Azure VM.
+- 📝 **main.py** - FastAPI based deployment script for the model on Azure VM.
 - 🖥️ **client.py** - Client code to interact with the deployed API.
 
 ## 📌 Requirements
