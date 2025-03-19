@@ -23,21 +23,35 @@ Ensure you have the following installed before proceeding:
 - 🌍 Requests
 - 🖥️ GPU: NVIDIA A100 with 80GB storage
 
-## 🚀 Running the Deployment & using Client Script
+## 🚀 Deployment Steps
 
-### 1️⃣ Install Dependencies
+### 1️⃣ Clone the Repository
+Run the following command to clone this repository:
+```bash
+git clone https://github.com/adityadeshpande03/Gemma-3-Deployment.git
+cd Gemma-3-Deployment
+```
+
+### 2️⃣ Create a Virtual Environment
+It is recommended to create a virtual environment before installing dependencies:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+```
+
+### 3️⃣ Install Dependencies
 Run the following command to install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Start the FastAPI Server
+### 4️⃣ Start the FastAPI Server
 Run the `main.py` script to start the API server:
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-### 3️⃣ Test the API (Optional)
+### 5️⃣ Test the API (Optional)
 Once the server is running, you can test it using:
 ```bash
 curl -X POST "http://your-vm-ip:8000/predict" \
@@ -46,7 +60,7 @@ curl -X POST "http://your-vm-ip:8000/predict" \
      -d '{"input_text": "Hello, how are you?"}'
 ```
 
-### 4️⃣ Run the Client Script
+### 6️⃣ Run the Client Script
 Execute `client.py` to interact with the deployed model:
 ```bash
 python client.py
