@@ -25,36 +25,32 @@ Ensure you have the following installed before proceeding:
 
 ## 🚀 Running the Deployment & using Client Script
 
-1️⃣ Install Dependencies
-
+### 1️⃣ Install Dependencies
 Run the following command to install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-pip install fastapi uvicorn transformers requests
-
-2️⃣ Start the FastAPI Server
-
-Run the main.py script to start the API server:
-
+### 2️⃣ Start the FastAPI Server
+Run the `main.py` script to start the API server:
+```bash
 uvicorn main:app --host 0.0.0.0 --port 8000
+```
 
-If you want to run it in the background, use:
-
-nohup uvicorn main:app --host 0.0.0.0 --port 8000 > output.log 2>&1 &
-
-3️⃣ Test the API (Optional)
-
+### 3️⃣ Test the API (Optional)
 Once the server is running, you can test it using:
-
+```bash
 curl -X POST "http://your-vm-ip:8000/predict" \
      -H "Content-Type: application/json" \
      -H "API-Key: your_api_key" \
      -d '{"input_text": "Hello, how are you?"}'
+```
 
-4️⃣ Run the Client Script
-
-Execute client.py to interact with the deployed model:
-
+### 4️⃣ Run the Client Script
+Execute `client.py` to interact with the deployed model:
+```bash
 python client.py
+```
 
 ---
 
