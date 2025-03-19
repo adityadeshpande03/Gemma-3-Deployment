@@ -23,6 +23,39 @@ Ensure you have the following installed before proceeding:
 - 🌍 Requests
 - 🖥️ GPU: NVIDIA A100 with 80GB storage
 
+## 🚀 Running the Deployment & using Client Script
+
+1️⃣ Install Dependencies
+
+Run the following command to install the required dependencies:
+
+pip install fastapi uvicorn transformers requests
+
+2️⃣ Start the FastAPI Server
+
+Run the main.py script to start the API server:
+
+uvicorn main:app --host 0.0.0.0 --port 8000
+
+If you want to run it in the background, use:
+
+nohup uvicorn main:app --host 0.0.0.0 --port 8000 > output.log 2>&1 &
+
+3️⃣ Test the API (Optional)
+
+Once the server is running, you can test it using:
+
+curl -X POST "http://your-vm-ip:8000/predict" \
+     -H "Content-Type: application/json" \
+     -H "API-Key: your_api_key" \
+     -d '{"input_text": "Hello, how are you?"}'
+
+4️⃣ Run the Client Script
+
+Execute client.py to interact with the deployed model:
+
+python client.py
+
 ---
 
 Made with ❤️ by Adi | [GitHub Repository](https://github.com/adityadeshpande03/Gemma-3-Deployment)
