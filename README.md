@@ -1,4 +1,4 @@
-# 🚀 Gemma 3 Deployment
+<center># 🚀 Gemma 3 Deployment</center>
 
 This repository provides instructions on how to deploy the **Gemma-3-27B-it** model on an Azure Virtual Machine (VM). The deployment utilizes **FastAPI** to create an API endpoint secured with an API key.
 
