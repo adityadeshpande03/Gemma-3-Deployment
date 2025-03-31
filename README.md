@@ -38,19 +38,13 @@ Activating the python virtual environment:
 source gemma3-env/bin/activate  # On Windows use: gemma3-env\Scripts\activate
 ```
 
-### 3️⃣ Install Dependencies
-Run the following command to install the required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-### 4️⃣ Start the FastAPI Server
+### 3️⃣ Start the FastAPI Server
 Run the `main.py` script to start the API server:
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-### 5️⃣ Run the Client Script
+### 4️⃣ Run the Client Script
 Execute `client.py` to interact with the deployed model:
 ```bash
 python client.py
