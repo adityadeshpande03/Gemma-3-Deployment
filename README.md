@@ -21,7 +21,7 @@ Ensure you have the following installed before proceeding:
 - 🔥 Uvicorn
 - 🤗 Transformers
 - 🌍 Requests
-- 🖥️ GPU: NVIDIA A100 with 80GB storage
+- 🖥️ GPU: 2 NVIDIA A100 GPU each with 80GB storage
 
 ## 🚀 Deployment Steps
 
@@ -32,11 +32,10 @@ git clone https://github.com/adityadeshpande03/Gemma-3-Deployment.git
 cd Gemma-3-Deployment
 ```
 
-### 2️⃣ Create a Virtual Environment
-It is recommended to create a virtual environment before installing dependencies:
+### 2️⃣ Activating the Virtual Environment
+Activating the python virtual environment:
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+source gemma3-env/bin/activate  # On Windows use: gemma3-env\Scripts\activate
 ```
 
 ### 3️⃣ Install Dependencies
@@ -51,16 +50,7 @@ Run the `main.py` script to start the API server:
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-### 5️⃣ Test the API (Optional)
-Once the server is running, you can test it using:
-```bash
-curl -X POST "http://your-vm-ip:8000/predict" \
-     -H "Content-Type: application/json" \
-     -H "API-Key: your_api_key" \
-     -d '{"input_text": "Hello, how are you?"}'
-```
-
-### 6️⃣ Run the Client Script
+### 5️⃣ Run the Client Script
 Execute `client.py` to interact with the deployed model:
 ```bash
 python client.py
